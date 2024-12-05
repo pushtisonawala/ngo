@@ -1,0 +1,147 @@
+h1{
+    font-size: 4rem;
+    font-weight: 2000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35%;
+    text-decoration: underline;
+    
+    
+}
+.main{
+    background-image: url(https://img.freepik.com/free-vector/beautiful-decorative-soft-colorful-watercolor-texture-background_1055-14290.jpg?size=626&ext=jpg&ga=GA1.1.1141335507.1717718400&semt=ais_user);
+    background-size: cover;
+    width:100%;
+    height:1500px;
+}
+.box1{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://images.livemint.com/img/2021/05/12/1600x900/ca03b508-b306-11eb-8e1b-80b8ec5f5986_1620834068460_1620834233590.jpg);
+    background-size: cover;
+
+}
+.box2{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://give.do/blog/wp-content/uploads/2023/11/5-NGOs-to-support-this-Childrens-Day-Give-blog.jpeg);
+    background-size: cover;
+}
+.box{
+    display: flex;
+    padding:30px;
+}
+.box3{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://kalapeet.com/wp-content/uploads/2021/06/cause-slider-1.jpg    );
+    background-size: cover;
+}
+
+.box4{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://www.livemint.com/rf/Image-621x414/LiveMint/Period1/2013/02/27/Photos/18--621x414.jpg);
+    background-size: cover;
+}
+.box5{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2016/09/o-international-literacy-day-girls-facebook-1473321090.jpg);
+    background-size: cover;
+}
+.box6{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/07/18/Photos/Processed/longpage-k0JE--621x414@LiveMint.jpg);
+    background-size: cover;
+
+    }
+.b{
+    display: flex;
+    padding:30px;
+}
+.box7{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://www.shutterstock.com/image-photo/smiling-faces-young-children-having-600nw-639450937.jpg);
+    background-size: cover;
+
+}
+.box8{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://kalapeet.com/wp-content/uploads/2021/06/cause-slider-1.jpg);
+    background-size: cover;
+}
+.box9{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://leher.org/wp-content/uploads/2019/04/01_Group_Photo_Manisha_and_team.jpg);
+    background-size: cover;
+
+}
+.b1{
+    display: flex;
+    padding:30px;
+    
+}
+.box10{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://www.cry.org/wp-content/themes/cry/images/send-children-back-to-school.jpg);
+    background-size: cover;
+
+}
+.box11{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://cdn.downtoearth.org.in/library/large/2022-02-25/0.25794500_1645773147_istock-870402320.jpg);
+    background-size: cover;
+
+}
+.box12{
+    width:35%;
+    height:300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://equalitynow.storage.googleapis.com/wp-content/uploads/2021/10/28221750/Screen-Shot-2021-10-28-at-6.26.07-PM-1.png);
+    background-size: cover;
+
+}
+.b2{
+    display: flex;
+}

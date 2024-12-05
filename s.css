@@ -1,0 +1,73 @@
+.navbar{
+    width:100%;
+    height:120px;
+    background-color: rgb(20, 16, 16);
+    display: flex;
+    
+    
+    
+}
+.logo{
+    display:flex;
+    justify-content: flex-start;
+ background-image: url(https://i.pinimg.com/originals/b4/fd/03/b4fd0380e781ecc607be819d6e3c649e.jpg);
+    background-size: cover;
+    width:100px;
+    height:100px;
+
+    
+}
+
+.log{
+    display: flex;
+   
+}
+.his{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    color: aliceblue;
+    width:50%;
+    margin-left:40%;
+    font-size: 1.5rem;
+}
+.main{
+    background-image:url(https://marketplace.canva.com/EAFdY-hVvKs/1/0/1131w/canva-beige-white-aesthetic-paper-notes-background-a4-document-QDBlYAjBN24.jpg);
+    background-size: cover;
+    width:100%;
+    height:600px;
+}
+.heroquote{
+    font-size:4rem;
+    font-weight: 900;
+    color: black;
+    display: flex;
+    margin-left: 20%;
+    margin-bottom: 20px;
+
+}
+.trans{
+    font-size:4rem;
+    font-weight: 900;
+    color: black;
+    display: flex;
+    margin-left: 24%;
+
+}
+.history{
+    font-size:1.5rem;
+    font-weight: 900;
+    color:rgb(32, 1, 1);
+    display: flex;
+    margin-left: 0px;
+    margin-top: 60px;
+
+}
+button{
+    width:150px;
+    height:50px;
+    background-color: rgb(27, 23, 30);
+    color: azure;
+    margin-left: 43%;
+    margin-top: 80px;
+}

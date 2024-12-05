@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sty.css">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <div class="mains">
+        <div class="nm">
+            <form autocomplete="off" onsubmit="signup(event)">
+                <input type="text" id="signupName" placeholder="Enter your full name">
+                <input type="email" id="signupEmail" placeholder="Enter your email address">
+                <input type="password" id="signupPassword" placeholder="Create password">
+                <input type="password" id="signupConfirmPassword" placeholder="Confirm password">
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDLlkaiMHCTNXnaAl2YVMX0EJnhFz11Tmk",
+            authDomain: "fir-tut-6891b.firebaseapp.com",
+            projectId: "fir-tut-6891b",
+            storageBucket: "fir-tut-6891b.appspot.com",
+            messagingSenderId: "469057735464",
+            appId: "1:469057735464:web:1e3cf85f14a57f2bd29e1d"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        async function signup(e) {
+            e.preventDefault();
+            const email = document.querySelector("#signupEmail").value;
+            const password = document.querySelector("#signupPassword").value;
+
+            try {
+                const result = await createUserWithEmailAndPassword(auth, email, password);
+                console.log("User created:", result.user);
+                M.toast({html: 'User created successfully!', classes: 'green'});
+
+                // Clear the input fields
+                document.querySelector("#signupName").value = "";
+                document.querySelector("#signupEmail").value = "";
+                document.querySelector("#signupPassword").value = "";
+                document.querySelector("#signupConfirmPassword").value = "";
+            } catch (err) {
+                console.error(err);
+                M.toast({html: err.message, classes: 'red'});
+            }
+        }
+
+        window.signup = signup;
+    </script>
+</body>
+</html>

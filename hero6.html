@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="s4.css">
+</head>
+<body>
+    <div class="main">
+        <h>Have a question, want to get involved, or simply eager to connect? Welcome to our contact page, the gateway to reaching out and joining hands with us in our mission to create positive change. Your voice matters, and we're here to listen, collaborate, and make a difference together.</h>
+
+        <!-- Address Section -->
+        <div class="address">
+            Address: Plot No: 212, New No.45, Palkalai Nagar,<br>
+            7th Link Road, Palavakkam,<br>
+            Chennai - 600 041<br>
+            Tamil Nadu, India.
+            <div class="t">Telephone: +91 - 44 – 24515353</div>
+        </div>
+
+        <!-- Enquiry Section -->
+        <div class="enq">For Media Enquiries, Contact</div>
+        <div class="name">Mr. Vinod Daniel</div>
+        <div class="email">Email us at <a href="mailto:vinoddaniel@gmail.com">vinoddaniel@gmail.com</a></div>
+
+        <!-- Comment Section -->
+        <textarea id="comments" placeholder="Comments or Questions"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" onclick="submitForm()">Submit</button>
+    </div>
+
+    <script>
+        function submitForm() {
+            const comments = document.getElementById('comments').value;
+
+            if (comments.trim() === "") {
+                alert("Please enter your comments or questions before submitting.");
+                return;
+            }
+
+            // Alert before redirect
+            alert("Thank you for your submission!");
+
+            // Redirect to hero4.html after a short delay
+            setTimeout(function() {
+                window.location.href = "hero2.html";
+            }, 1500); // 1.5-second delay before redirecting
+        }
+    </script>
+</body>
+</html>
