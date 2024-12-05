@@ -3,37 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vriddhi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="sty.css">
+
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
-    <div class="main">
-        <div class="logo">
-            <i class="fa-solid fa-handshake-angle"></i>
-            VRIDDHI
-        </div>
-        <div class="slogan">
-            Building bridges of hope and compassion.
-        </div>
-        <div class="log">
-            <button id="log" onclick="location.href='login.html'">LOGIN</button>
-            <button id="sign" onclick="location.href='sign.html'">SIGN UP</button>
-            <button id="logoutBtn" onclick="logout()">LOG OUT</button>
+    <div class="mains">
+        <div class="nm">
+            <form autocomplete="off" onsubmit="login(event)">
+                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
         </div>
     </div>
 
-    <!-- Materialize JS -->
+    <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script type="module">
-        // Import Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-        import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
-    
-        // Your web app's Firebase configuration
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
         const firebaseConfig = {
             apiKey: "AIzaSyDLlkaiMHCTNXnaAl2YVMX0EJnhFz11Tmk",
             authDomain: "fir-tut-6891b.firebaseapp.com",
@@ -42,23 +35,29 @@
             messagingSenderId: "469057735464",
             appId: "1:469057735464:web:1e3cf85f14a57f2bd29e1d"
         };
-      
-        // Initialize Firebase
+
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
-        
-        async function logout() {
+
+        async function login(e) {
+            e.preventDefault();
+            const email = document.querySelector("#loginEmail").value;
+            const password = document.querySelector("#loginPassword").value;
+
             try {
-                await signOut(auth);
-                console.log("User logged out");
-                M.toast({html: 'User logged out successfully!', classes: 'green'});
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                console.log("User logged in:", userCredential.user);
+                M.toast({html: 'User logged in successfully!', classes: 'green'});
+                
+                // Redirect to the home page or dashboard after successful login
+                window.location.href = 'home.html'; // Change this to the appropriate page after login
             } catch (err) {
                 console.error(err);
                 M.toast({html: err.message, classes: 'red'});
             }
         }
-        window.logout = logout;
+
+        window.login = login;
     </script>
 </body>
 </html>
-
